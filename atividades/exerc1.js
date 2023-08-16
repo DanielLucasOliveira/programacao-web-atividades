@@ -1,8 +1,11 @@
 function numeroPrimo(num){
-    for(var i = 3; i<num; i+=2){
-        if( num % i === 0 || num % ( i + 2) === 0){
-            return console.log("Não é primo");
+    if(num % 2 === 0 || num % 3 === 0)
+    return false;
+    for(var i = 5; i * i; i += 6){
+        if( num % i === 0 || num % (i + 2) === 0){
+            return false
         }
-        console.log(num, "é primo");
+        return true
     }
-}console.log(numeroPrimo(13));
+    
+}console.log(numeroPrimo(22));
