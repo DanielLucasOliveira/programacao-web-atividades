@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Agendamento de Consulta</h1>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            
+            <div class="col-6">
+                <h3>Dados do Paciente</h3>
+                <h4>Nome: {{dados_pessoais.nome}}</h4>
+                <h4>CPF: {{dados_pessoais.cpf}}</h4>
+                <h4>Data de nascimento: {{dados_pessoais.dataNascimento}}</h4>
+                <h4>UF: {{dados_pessoais.uf}}</h4>
+                <h4>Endereço: {{dados_pessoais.endereco}}</h4>
+                <h4>Cidade: {{dados_pessoais.cidade}}</h4>
+                <h4>Telefone: {{dados_pessoais.tel}}</h4>
+                <h4>Email: {{dados_pessoais.email}}</h4>
+
+            </div>
+
+            <div class="col-6">
+                <h3>Dados da Consulta: {dados_consulta}</h3>
+                <h4>Especialidade Médica: {dados_consulta}</h4>
+                <h4>Data da consulta: {dados_consulta}</h4>
+                <h4>Hora da consulta: {dados_consulta}</h4>
+
+                <h4>Médicamentos Alérgicos </h4>
+                    <h5>Antibióticos: {dados_consulta} </h5>
+                
+                <h4>Antiinflamatórios: </h4>
+                    <h5>Informações adicionais: {dados_consulta}</h5>
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
