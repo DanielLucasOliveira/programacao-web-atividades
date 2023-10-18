@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Agendamento de Consulta</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <h3>Dados do Paciente</h3>
+                <form action="/consulta" method="post">
+                    <div class="mb-3 mt-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome:" name="nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cpf" class="form-label">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="CPF:" name="cpf">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataNascimento" class="form-label">Data de nascimento:</label>
+                        <input type="date" class="form-control" id="dataNascimento" placeholder="Data de nascimento:"
+                            name="dataNascimento">
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <label for="uf" class="form-label">UF:</label>
+                        <select name="uf" id="uf" class="form-control">
+                            <option value="">Selecione:</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="endereco" class="form-label">Endereço:</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Endereço:" name="endereco">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="cidade" class="form-label">Cidade:</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Cidade:" name="cidade">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Telefone:</label>
+                        <input type="tel" class="form-control" id="tel" placeholder="Telefone:" name="tel">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="E-mail:" name="email">
+                    </div>
+
+                    <h3>Dados da Consulta</h3>
+                    <div class="mb-3 mt-3">
+                        <label for="especialidade" class="form-label">Especialidade Médica:</label>
+                        <select name="especialidade" id="especialidade" class="form-control">
+                            <option value="">Selecione:</option>
+                            <option value="1">Cardiologia</option>
+                            <option value="2">Dermatologia</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataConsulta" class="form-label">Data da consulta:</label>
+                        <input type="date" class="form-control" id="dataConsulta" placeholder="Data:"
+                            name="dataConsulta">
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaConsulta" class="form-label">Hora da consulta:</label>
+                        <input type="time" class="form-control" id="horaConsulta" placeholder="Data:"
+                            name="horaConsulta">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <h5>Médicamentos Alérgicos</h5>
+                        <div class="form-check">
+                            <input type="checkbox" id="antibioticos" name="antibioticos">
+                            <label for="antibioticos" class="form-label">Antibióticos:</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="anti_infla" name="anti_infla">
+                            <label for="anti_infla" class="form-label">Antiinflamatórios:</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="infos" class="form-label">Informações adicionais:</label>
+                        <textarea class="form-control" id="infos"
+                            placeholder="Informações adicionais:" name="infos" cols="5" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
