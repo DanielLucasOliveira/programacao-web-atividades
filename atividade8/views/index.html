@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h2>Calculadora</h2>
+
+    <form action="/calcular" method="post">
+        <label for="n1">Informe o primeiro valor: <input type="text"></label>
+        <label for="operadores">Selecione a operação matemática</label>
+    <select name="operadores" id="operadores">
+        <option value="" hidden>Selecione:</option>
+        <option value="+">Soma (+) </option>
+        <option value="-">Subtração (-) </option>
+        <option value="*">Multiplicação (*)</option>
+        <option value="/">Divisão (/)</option>
+    </select>
+    <label for="n2">Informe o segundo valor: <input type="text"></label>
+    <input type="submit" value="Calcular" style="display: block;">
+    </form>
+
+</body>
+
+</html>
